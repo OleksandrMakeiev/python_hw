@@ -65,13 +65,15 @@ print()
 print("Задание 10")
 text = 'Leo Tolstoy*1828-08-28*1910-11-20'
 print(text)
-name = str(text[:11])
+name = str(text.split( "*")[0])
 #print(name)
-year_of_birth = int(text[12:16])
+year_of_birth = str(text.split("*")[1].split("-")[0])
 #print(year_of_birth)
-year_of_death = int(text[23:27])
+born = int(year_of_birth)
+year_of_death = str(text.split("*")[2].split("-")[-3])
 #print(year_of_death)
-age = year_of_death - year_of_birth
+death = int(year_of_death)
+age = death - born
 age_print = str(age)
 #print(age_print)
 result = name + "," + " " + age_print
