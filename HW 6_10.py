@@ -53,6 +53,5 @@ date2 = lst[2]
 year1 = date1.split('-')[0]
 year2 = date2.split('-')[0]
 age = int(year2) - int(year1)
-age_print = str(age)
-result = name + "," + " " + age_print
+result = "%s, %d" % (name, age)
 print(result)
