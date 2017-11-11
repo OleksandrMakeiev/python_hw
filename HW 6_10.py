@@ -43,38 +43,16 @@ print(result)
 print("--------------------------------------------------------------------------------------------------------------")
 print()
 
-#---------------------------------------------------------------------------------------------------------------
-
-#print("10. Дана строка Leonid Listyev*1956-05-10*1995-03-01.\n""Требуется написать программу, которая по переданной строке определит возраст писателя и вернет его имя и возраст.")
-#print()
-#text1 = 'Leonid Listyev*1956-05-10*1995-03-01'
-#print(text1)
-#name = str(text1[:14])
-#print(name)
-#year_of_birth = int(text1[15:19])
-#print(year_of_birth)
-#year_of_death = int(text1[26:30])
-#print(year_of_death)
-#age = year_of_death - year_of_birth
-#age_print = str(age)
-#print(age_print)
-#result = name + " " + age_print
-#print(result)
-
-#----------------------------------------------------------------------------
 print("Задание 10")
-text = 'Leo Tolstoy*1828-08-28*1910-11-20'
-print(text)
-name = text.split( "*")[0]
-#print(name)
-year_of_birth = text.split("*")[1].split("-")[0]
-#print(year_of_birth)
-born = int(year_of_birth)
-year_of_death = text.split("*")[2].split("-")[-3]
-#print(year_of_death)
-death = int(year_of_death)
-age = death - born
+s = 'Leo Tolstoy*1828-08-28*1910-11-20'
+lst = s.split('*')
+print(lst)
+name = s.split( "*")[0]
+date1 = lst[1]
+date2 = lst[2]
+year1 = date1.split('-')[0]
+year2 = date2.split('-')[0]
+age = int(year2) - int(year1)
 age_print = str(age)
-#print(age_print)
 result = name + "," + " " + age_print
 print(result)
