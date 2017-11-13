@@ -39,7 +39,8 @@ def triangle_square_and_perimeter(a, b):
     square = 0.5 * a * b
     c = math.sqrt(a**2 + b**2)
     perimeter = a + b + c
-    print("Площадь треугольника равна %f\n Периметр треугольника равен %f" %(square, perimeter))
+    print("Площадь треугольника равна %.2f\n Периметр треугольника равен %.2f" %(square, perimeter))
 
 a = (int(input("Введите значение первого катета ")))
 b = (int(input("Введите значение второго катета ")))
+triangle_square_and_perimeter(a,b)
