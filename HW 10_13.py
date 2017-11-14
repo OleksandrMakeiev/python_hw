@@ -8,26 +8,35 @@ print("-------------------------------------------------------------------------
 import math
 print("11. Написать функцию, которая будет переводить градусы в радианы. Используя эту функцию вывести на экран значения косинусов углов в 60, 45 и 40 градусов.")
 
-def degree_to_radians_and_cos(degree):
+def degree_to_radians(degree):
     radians = math.radians(degree)
-    cos_of_angle = math.cos(radians)
-    print('Cos %s = %.1f' % (degree, cos_of_angle))
+    return radians
 
-degree_to_radians_and_cos(60)
-degree_to_radians_and_cos(40)
-degree_to_radians_and_cos(45)
+math.cos(degree_to_radians(60))
+math.cos(degree_to_radians(40))
+math.cos(degree_to_radians(45))
+
+print( math.cos( degree_to_radians( 60 ) ) )
+print( math.cos( degree_to_radians( 40 ) ) )
+print( math.cos( degree_to_radians( 45 ) ) )
+
+degree_to_radians(60)
+degree_to_radians(40)
+degree_to_radians(45)
 
 print("--------------------------------------------------------------------------------------------------------------")
 print()
 print("12 Написать функцию, которая рассчитывает сумму всех цифр некоторого трехзначного числа, введенного пользователем в консоли, без использования операторов цикла. А теперь без строк :)")
 
-def abs_and_add(number):
+def abs_and_add(three_digits_number):
 
-    a = number // 100
-    b = number % 100 // 10
-    c = number % 10
+    a = three_digits_number // 100
+    b = three_digits_number % 100 // 10
+    c = three_digits_number % 10
     add = a + b + c
-    print("Сумма всех цифр некоторого трехзначного числа = %d" %(add))
+    print("Сумма всех цифр некоторого трехзначного числа = %d" % (add))
+    return  add
+
 
 abs_and_add(int(input('Введите трехзначное число: ')))
 
@@ -40,6 +49,7 @@ def triangle_square_and_perimeter(a, b):
     c = math.sqrt(a**2 + b**2)
     perimeter = a + b + c
     print("Площадь треугольника равна %.2f\n Периметр треугольника равен %.2f" %(square, perimeter))
+    return square, perimeter
 
 a = (int(input("Введите значение первого катета ")))
 b = (int(input("Введите значение второго катета ")))
