@@ -6,9 +6,12 @@ print("14. Написать функцию, которая будет прове
 
 def is_even (numeric):
     if numeric % 2:
-        print("Нечетное число")
+        print("%d - Нечетное число" % numeric)
+        return False
     else:
-        print("Четное число")
+        print("%d - четное число" % numeric)
+        return True
+
 
 numeric = int(input("Введите целое число: "))
 is_even(numeric)
@@ -18,19 +21,21 @@ print('-------------------------------------------------------------------------
 print()
 print("15 Написать функцию, которая отвечает на вопрос, пересекаются ли две заданные окружности на плоскости.\nКаждая окружность задается координатами центра и радиусом.")
 
-def is_interest(center1, center2, radius1, radius2):
+def is_intersected(center1, center2, radius1, radius2):
     center_to_center = center1 - center2
     radius_sum = radius1 + radius2
     if  radius_sum >= abs(center_to_center):
         print("Окружности пересекаются!")
+        return True
     else:
         print("Окружности не пересекаются!")
+        return False
 
 center1 = int(input("Введите центр первой окружности: "))
 center2 = int(input("Введите центр второй окружности: "))
 radius1 = int(input("Введите радиус первой окружности: "))
 radius2 = int(input("Введите радиус второй окружности: "))
-is_interest(center1, center2, radius1, radius2)
+is_intersected(center1, center2, radius1, radius2)
 
 print()
 print('--------------------------------------------------------------------------------------------------------')
@@ -43,8 +48,10 @@ def is_train_crash (speed1, distance, speed2, distance_train1):
     time2 = distance_train2 / speed2
     if time1 < time2:
         print("Столкновения избежали.")
+        return False
     else:
         print("Поезда столкнулись!")
+        return True
 
 speed1 = int(input("Введите скорость первого поезда: "))
 speed2 = int(input("Введите скорость вервого поезда: "))
