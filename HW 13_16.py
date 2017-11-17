@@ -6,7 +6,7 @@ print("14. Написать функцию, которая будет прове
 
 def is_even (numeric):
     if numeric % 2:
-        print("%d - Нечетное число" % numeric)
+        print("%d - нечетное число" % numeric)
         return False
     else:
         print("%d - четное число" % numeric)
@@ -21,21 +21,31 @@ print('-------------------------------------------------------------------------
 print()
 print("15 Написать функцию, которая отвечает на вопрос, пересекаются ли две заданные окружности на плоскости.\nКаждая окружность задается координатами центра и радиусом.")
 
-def is_intersected(center1, center2, radius1, radius2):
-    center_to_center = center1 - center2
-    radius_sum = radius1 + radius2
-    if  radius_sum >= abs(center_to_center):
-        print("Окружности пересекаются!")
-        return True
-    else:
-        print("Окружности не пересекаются!")
+def is_intersected(x1, y1, x2, y2, radius1, radius2):
+    center_to_center = math.sqrt((x1-x2)**2 + (y1-y2)**2)
+    if  center_to_center > (radius1 + radius2):
+        print("Точек пересечения нет")
         return False
 
-center1 = int(input("Введите центр первой окружности: "))
-center2 = int(input("Введите центр второй окружности: "))
+    elif center_to_center < abs(radius1 - radius2):
+        print("Точек пересечения нет")
+        return False
+
+    elif abs(center_to_center - (radius1 - radius2)) < 0.1:
+        print("Окружности касаются")
+        return True
+
+    else:
+        print("2 точки пересечения")
+        return True
+
+x1 = int(input("Введите значение координат по оси Х первой окружности: "))
+x2 = int(input("Введите значение координат по оси Х второй окружности: "))
+y1 = int(input("Введите значение координат по оси Y первой окружности: "))
+y2 = int(input("Введите значение координат по оси Y второй окружности: "))
 radius1 = int(input("Введите радиус первой окружности: "))
 radius2 = int(input("Введите радиус второй окружности: "))
-is_intersected(center1, center2, radius1, radius2)
+is_intersected(x1, y1, x2, y2, radius1, radius2)
 
 print()
 print('--------------------------------------------------------------------------------------------------------')
