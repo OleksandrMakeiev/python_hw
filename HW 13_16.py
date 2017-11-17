@@ -48,9 +48,9 @@ if is_intersected(x1, y1, x2, y2, radius1, radius2):
 elif center_to_center < abs(radius1 - radius2):
     print("Точек пересечения нет")
 elif abs(center_to_center - (radius1 - radius2)) < 0.1:
-    print("Окружности касаются")
-else:
     print("2 точки пересечения")
+else:
+    print("Окружности касаются")
 
 print()
 print('--------------------------------------------------------------------------------------------------------')
@@ -62,10 +62,10 @@ def is_train_crash(speed1, distance, speed2, distance_train1):
     distance_train2 = distance - distance_train1
     time1 = distance_train1 / speed1
     time2 = distance_train2 / speed2
-    if time1 < time2:
-        return True
-    else:
+    if time1 > time2:
         return False
+    else:
+        return True
 
 speed1 = int(input("Введите скорость первого поезда: "))
 speed2 = int(input("Введите скорость второго поезда: "))
