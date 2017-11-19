@@ -41,12 +41,13 @@ radius2 = int(input("Введите радиус второй окружност
 center_to_center = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 is_intersected(x1, y1, x2, y2, radius1, radius2)
 
-if is_intersected(x1, y1, x2, y2, radius1, radius2):
-    print("Точек пересечения нет")
-if center_to_center < abs(radius1 - radius2):
-    print("Точек пересечения нет")
+if center_to_center <= (radius1 + radius2):
+    if center_to_center < abs(radius1 - radius2):
+        print('Не пересекаются')
+    else:
+        print("Окружности касаются")
 else:
-    print("Окружности касаются")
+    print('Не пересекаются')
 
 print()
 print('--------------------------------------------------------------------------------------------------------')
