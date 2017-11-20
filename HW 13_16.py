@@ -24,6 +24,7 @@ print()
 print("15 Написать функцию, которая отвечает на вопрос, пересекаются ли две заданные окружности на плоскости.\nКаждая окружность задается координатами центра и радиусом.")
 
 def is_intersected(x1, y1, x2, y2, radius1, radius2):
+    center_to_center = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
     if center_to_center <= (radius1 + radius2):
         if center_to_center < abs(radius2 - radius1):
             return False
@@ -38,7 +39,6 @@ y1 = int(input("Введите значение координат по оси Y
 y2 = int(input("Введите значение координат по оси Y второй окружности: "))
 radius1 = int(input("Введите радиус первой окружности: "))
 radius2 = int(input("Введите радиус второй окружности: "))
-center_to_center = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 is_intersected(x1, y1, x2, y2, radius1, radius2)
 
 if center_to_center <= (radius1 + radius2):
