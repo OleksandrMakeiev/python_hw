@@ -7,26 +7,19 @@ print()
 
 print('Введите значения a, b, c для квадратного уравнения такого типа: ax^2 + bx + c = 0')
 
-def solve_quadratic_equation(a, b, c, none):
+def solve_quadratic_equation(a, b, c):
+    discriminant = b ** 2 - 4 * a * c
     if discriminant > 0:
+        x1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        x2 = (-b - math.sqrt(discriminant)) / (2 * a)
         return (x1, x2)
     elif discriminant == 0:
         x = -b / (2 * a)
-        return (x, none)
+        return (x, None)
     else:
-        return (none, none)
+        return (None, None)
 
 a = (float(input("a = ")))
 b = (float(input("b = ")))
 c = (float(input("c = ")))
-discriminant = b ** 2 - 4 * a * c
-x1 = (-b + math.sqrt(discriminant)) / (2 * a)
-x2 = (-b - math.sqrt(discriminant)) / (2 * a)
-solve_quadratic_equation(a, b, c, none)
-
-if discriminant > 0:
-    print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
-elif discriminant == 0:
-    print("x = %.2f" % x)
-else:
-    print("Корней нет")
+solve_quadratic_equation(a, b, c)
