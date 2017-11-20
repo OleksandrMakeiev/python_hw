@@ -23,10 +23,10 @@ print('-------------------------------------------------------------------------
 print()
 print("15 Написать функцию, которая отвечает на вопрос, пересекаются ли две заданные окружности на плоскости.\nКаждая окружность задается координатами центра и радиусом.")
 
-def is_intersected(x1, y1, x2, y2, radius1, radius2):
-    center_to_center = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-    if center_to_center <= (radius1 + radius2):
-        if center_to_center > abs(radius2 - radius1):
+def is_intersected(x1, y1, radius1, x2, y2, radius2):
+    center_to_center = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    if center_to_center <= radius1 + radius2:
+        if abs(radius2 - radius1) > center_to_center:
             print('Не пересекаются')
             return False
         else:
