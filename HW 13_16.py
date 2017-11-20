@@ -27,10 +27,13 @@ def is_intersected(x1, y1, x2, y2, radius1, radius2):
     center_to_center = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
     if center_to_center <= (radius1 + radius2):
         if center_to_center < abs(radius2 - radius1):
+            print('Не пересекаются')
             return False
         else:
+            print("Окружности пересекаются")
             return True
     else:
+        print('Не пересекаются')
         return False
 
 x1 = int(input("Введите значение координат по оси Х первой окружности: "))
@@ -40,14 +43,6 @@ y2 = int(input("Введите значение координат по оси Y
 radius1 = int(input("Введите радиус первой окружности: "))
 radius2 = int(input("Введите радиус второй окружности: "))
 is_intersected(x1, y1, x2, y2, radius1, radius2)
-
-if center_to_center <= (radius1 + radius2):
-    if center_to_center < abs(radius1 - radius2):
-        print('Не пересекаются')
-    else:
-        print("Окружности касаются")
-else:
-    print('Не пересекаются')
 
 print()
 print('--------------------------------------------------------------------------------------------------------')
