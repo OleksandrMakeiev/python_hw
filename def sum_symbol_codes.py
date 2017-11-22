@@ -13,7 +13,6 @@ def sum_symbol_codes(first, last):
         max_value = first_symbol
     for i in range (min_value, max_value +1):
             sum_symbol += i
-            print(i)
     return sum_symbol
 
 print("Сумма введенных символов равна %d" % sum_symbol_codes(first, last))
