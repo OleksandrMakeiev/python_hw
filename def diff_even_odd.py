@@ -21,5 +21,6 @@ def diff_even_odd(num_limit, lower_bound, upper_bound):
     diff_even_odd = even_total_sum - odd_total_sum
 
     return diff_even_odd
+
 print("Разница сумм составляет %d" % diff_even_odd(num_limit, lower_bound, upper_bound))
 
