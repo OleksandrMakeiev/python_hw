@@ -8,10 +8,10 @@ while True:
     choice = int(input("Сделай свой выбор [1-10]: "))
 
     if choice > number:
-        print("Холоднее")
+        print("Меньше")
 
     elif choice < number:
-        print("Теплее")
+        print("Больше")
     elif choice == number:
         print("Угадал")
         break
