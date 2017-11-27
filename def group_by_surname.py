@@ -9,8 +9,8 @@ def group_by_surname(list_of_enrollees):
     enrollees_QtoT = 0
     enrollees_UtoZ = 0
 
-    for enrollees in list_of_enrollees:
-        surname = enrollees.split()[1][0]
+    for enrollee in list_of_enrollees:
+        surname = enrollee.split()[1][0]
 
         if 'A' <= surname.upper() <= 'I':
             enrollees_AtoI += 1
