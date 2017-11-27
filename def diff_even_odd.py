@@ -1,8 +1,8 @@
 # 20
 import random
-num_limit = (int(input("Введите количество случайных чисел, которые выберет программа:  ")))
-lower_bound = (int(input("Введите нижнюю границу поиска ")))
-upper_bound = (int(input("Введите верхнюю границу поиска ")))
+num_limit = int(input("Введите количество случайных чисел, которые выберет программа:  "))
+lower_bound = int(input("Введите нижнюю границу поиска "))
+upper_bound = int(input("Введите верхнюю границу поиска "))
 
 def diff_even_odd(num_limit, lower_bound, upper_bound):
     even_total_sum = 0
@@ -19,7 +19,6 @@ def diff_even_odd(num_limit, lower_bound, upper_bound):
             #print("Сумма нечетных чисел: ", odd_total_sum)
 
     diff_even_odd = even_total_sum - odd_total_sum
-
 
     return diff_even_odd
 print("Разница сумм составляет %d" % diff_even_odd(num_limit, lower_bound, upper_bound))
