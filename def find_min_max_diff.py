@@ -1,8 +1,8 @@
 import random
 
-num_limit = (int(input("Введите количество случайных чисел, которые выберет программа:  ")))
-lower_bound = (int(input("Введите нижнюю границу поиска: ")))
-upper_bound = (int(input("Введите верхнюю границу поиска: ")))
+num_limit = int(input("Введите количество случайных чисел, которые выберет программа:  "))
+lower_bound = int(input("Введите нижнюю границу поиска: "))
+upper_bound = int(input("Введите верхнюю границу поиска: "))
 
 def find_min_max_diff(num_limit, lower_bound, upper_bound):
     max_number = lower_bound
