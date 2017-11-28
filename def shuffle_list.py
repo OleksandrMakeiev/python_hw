@@ -9,5 +9,3 @@ def shuffle_list(list_to_shuffle):
     print("Перемешаный список: ", shuffle_list)
 
 shuffle_list(list_to_shuffle)
-
-
