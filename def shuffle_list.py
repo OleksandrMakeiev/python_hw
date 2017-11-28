@@ -8,8 +8,6 @@ def shuffle_list(list_to_shuffle):
     shuffle_list = random.sample(list_to_shuffle, len(list_to_shuffle))
     print("Перемешаный список: ", shuffle_list)
 
-    return shuffle_list
-
 shuffle_list(list_to_shuffle)
 
 
