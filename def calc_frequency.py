@@ -11,7 +11,7 @@ def calc_frequency(lst):
     second = lst.count(1)
     third = lst.count(0)
     results = []
-    for c in lst:
+    for c in range (1):
         if first > second  and first > third:
             results = first
             print("-1 cамое частое число и оно встречается ", results)
