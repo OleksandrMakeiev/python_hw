@@ -11,18 +11,19 @@ def calc_frequency(lst):
     second = lst.count(1)
     third = lst.count(0)
     results = []
-    for c in range (1):
-        if first > second  and first > third:
-            results = first
-            print("-1 cамое частое число и оно встречается ", results)
-        elif second > first and second > third:
-            results = second
-            print("1 cамое частое число и оно встречается ", results)
-        elif third > first and third > second:
-            results = third
-            print("0 cамое частое число и оно встречается ", results)
-        else:
-            return None
+    if first > second and first > third:
+        results = first
+        print("-1 cамое частое число и оно встречается ", results)
+        return -1
+    elif second > first and second > third:
+        results = second
+        print("1 cамое частое число и оно встречается ", results)
+        return 1
+    elif third > first and third > second:
+        results = third
+        print("0 cамое частое число и оно встречается ", results)
+        return 0
+
+    elif (first == second and first !=0) or (second == third and second !=0) or (third == first and third != 0):
+        return None
 calc_frequency(lst)
-
-
