@@ -1,6 +1,8 @@
 #26
 import random
-lst = [random.randint(-1, 1) for i in range(11)]
+# lst = [random.randint(-1, 1) for i in range(11)]
+lst = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+
 print(lst)
 
 
@@ -11,12 +13,9 @@ def calc_frequency(lst):
     second = lst.count(1)
     third = lst.count(0)
     results = []
-    if first == second:
+    if (first == second and first != 0) or (second == third and second != 0) or (third == first and third != 0):
         return None
-    elif third == second:
-        return None
-    elif first == third:
-        return None
+
     elif first > second and first > third:
         results = first
         print("-1 cамое частое число и оно встречается ", results)
