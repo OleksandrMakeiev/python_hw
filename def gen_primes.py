@@ -1,7 +1,7 @@
 #30
 def gen_primes():
     list_of_ints = []
-    for x in range(1, 101):
+    for x in range(2, 101):
         if x == 1:
             pass
         else:
